@@ -91,7 +91,7 @@ function  emailvalidation(){
 }
 function  passwordvalidation(){
     //alert("passwordvalidation");
-    // strengthpassword.visibility = "visible";
+     strengthpassword.style.visibility = "visible";
     let strength = 0;
     if(password.value.match(lowerCaseLetters)){
         strength++;

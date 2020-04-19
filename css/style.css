@@ -94,7 +94,7 @@ background-color: #ffffff;
     position: relative;
     width: 400px;
 } */
-.btn-block{
+.btnsubmit{
     background-image: linear-gradient(#77f777,green);
 }
 .form-group{
@@ -142,7 +142,7 @@ background-color: #ffffff;
 }
 
 #strengthpassword{
-    visibility: visible;
+    visibility: hidden;
     height: 10px;
     background-color: grey;
     width: 150px;
