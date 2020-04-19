@@ -13,14 +13,14 @@
 
 <body>
     <header class="top-navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark floatRight">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html"><img class="logo" src="img/logopng.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse floatRight" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto"><!-- ml-auto for floating right  -->
                     
                     <li class="nav-item active">
                         <a class="nav-link" href="signUp.html">Sign Up</a>
@@ -28,7 +28,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="signIn.html">Sign In</a>
                     </li>
-                    
 
                 </ul>
                 
@@ -54,32 +53,49 @@
             </div>
             <div class="row">
                 <div class="col-md-4 offset-md-4">
-                    <form class="mb-5">
+                    <form class="mb-5" action="signIn.html" onsubmit="return validate()">
                         <div class="form-group">
                             <label>First Name</label>
-                            <input type="text" class="form-control">
+                            <label for="errorfirstname" id="errorfirstname"></label>
+                            <input type="text" class="form-control" id="firstname">
                         </div>
                         <div class="form-group">
                             <label>Last Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="lastname">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <label>Phone Number</label>
+                            <label for="errorphonenumber" id="errorphonenumber"></label>
+                            <input type="text" class="form-control" id="phonenumber">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="email">Email address</label>
+                            <label for="erroremail" id="erroremail"></label>
+                            <input type="email" class="form-control" id="email">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPasswordRe">Repeat Password</label>
-                            <input type="password" class="form-control" id="exampleInputPasswordRe">
+                            <label for="password">Password</label>
+                            <label for="strengthpasswordtext" id="strengthpasswordtext"></label>
+                            <meter id="strengthpassword" value="" min="0" max="3"></meter>
+                            <!-- <label for="strengthpassword" id="strengthpassword"></label> -->
+                            <label for="errorpassword" id="errorpassword"></label>
+                            <input type="password" class="form-control" id="password">
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                Your password must be minimum 8 characters long, contain at least one lower case and upper case letters and must contain atleast one number.
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordRe">Repeat Password</label>
+                            <label for="errorpasswordRe" id="errorpasswordRe"></label>
+                            <input type="password" class="form-control" id="passwordRe">
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Agree our <a href="#" target="_blank" rel="noopener noreferrer">Terms and Policy</a></label>
+                            <label for="errorcheckbox" id="errorcheckbox"></label><br>
+                            <input type="checkbox" class="form-check-input" id="check1">
+                            <label class="form-check-label" for="check1">Agree our <a href="#" target="_blank" rel="noopener noreferrer">Terms and Policy</a></label>
                         </div>
-                        <a href="signIn.html" class="btn btn-success btn-block"> Submit </a>
+                        <button class="btn btn-success btn-block">Sign Up</button>
+                        <!-- <a href="signIn.html" class="btn btn-success btn-block"> Submit </a> -->
                     </form>
                 </div>
             </div>
@@ -107,6 +123,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="signup.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script> -->
+        
 </body>
 
 </html>
