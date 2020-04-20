@@ -1,7 +1,17 @@
 body{
     background-color: rgb(190, 248, 219);
     /* background: url(../img/bubbleBg1.jpg); */
-
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+  
+  @keyframes example
+{
+    0% {background-color: rgb(190, 248, 219);;}
+    25% {background-color: rgb(156, 237, 240);}
+    50% {background-color: rgb(167, 224, 247);}
+    100% {background-color: rgb(169, 250, 200);}
 }
 
 /* header nav{
