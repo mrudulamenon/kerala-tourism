@@ -71,7 +71,12 @@ text-transform: uppercase;
 color: #000000;
 }
 .places {
-background-color: #ffffff;
+    background-image: linear-gradient(#b1f5b1,rgb(79, 209, 218));
+    border-radius: 15%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+.img-thumbnail{
+    border-radius: 25px
 }
 /* .places:hover {
  cursor: pointer;
@@ -83,12 +88,20 @@ background-color: #ffffff;
     margin-bottom: 0px;
     text-transform: capitalize;
     color: #ffffff;
+    background-image: linear-gradient(#b1f5b1,rgb(79, 209, 218));
+    border-radius: 25px;
+    text-align: center;
+    margin: 0 50px;
 }
+.places img{
+    border-radius: 50px!important;
+}
+/* prev Next AllDistrict btns */
 .DistrictBtn a {
     text-transform: uppercase;
     border-radius: 30px;
 }
-.district.distImg.img-fluid {
+.district img{
     border: 1px cadetblue;
     padding: 5px;
 }
@@ -107,7 +120,7 @@ background-color: #ffffff;
 } */
 .btnsubmit{
     background-image: linear-gradient(#77f777,green);
-    border-radius: 30px;
+    border-radius: 30px;    
 }
 .form-group{
     position: relative;
