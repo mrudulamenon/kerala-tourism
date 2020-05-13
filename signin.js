@@ -49,6 +49,7 @@ function validate() {
     // Basic Validation    
     let returnvalue = true;
     let focuselement = null;
+    let result=false;
     if(email.value.trim()==""){
         erroremail.innerHTML="E-mail cannot be Empty";
         erroremail.classList.add("invalidmessage");
@@ -59,7 +60,8 @@ function validate() {
         if(focuselement==null){focuselement = email;}
     }
     else{
-        returnvalue=emailvalidation();
+        result=emailvalidation();
+        if(returnvalue==true){returnvalue=result;}
     }
     if(password.value.trim()==""){
         errorpassword.innerHTML="Password cannot be Empty";
@@ -72,7 +74,8 @@ function validate() {
         if(focuselement==null){focuselement = password;}
     }
     else{
-        returnvalue=passwordvalidation();
+        result=passwordvalidation();
+        if(returnvalue==true){returnvalue=result;}
     }
     focuselement.focus();
     //alert(returnvalue);
